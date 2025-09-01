@@ -70,25 +70,39 @@ function SectionXiao() {
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-red-50">
       {/* Header */}
       <div className="sticky top-0 z-10 bg-white/90 backdrop-blur-sm border-b border-gray-200 p-4 sm:p-6">
-        <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-          <div className="flex items-center gap-3">
-            <img 
-              src="/Images/logo.jpg" 
-              alt="Logo de la empresa" 
-              className="w-10 h-10 sm:w-12 sm:h-12 object-contain rounded-lg shadow-md"
-            />
-            <h1 className="text-2xl sm:text-3xl font-bold text-gray-900">Llaveros</h1>
+        <div className="flex justify-between items-center gap-4">
+          {/* Left side: Logo and texts */}
+          <div className="flex flex-col gap-1 flex-1">
+            <div className="flex items-center gap-3">
+              <img 
+                src="/Images/logo.jpg" 
+                alt="Logo de la empresa" 
+                className="w-8 h-8 sm:w-12 sm:h-12 object-contain rounded-lg shadow-md"
+              />
+              <h1 className="text-xl sm:text-3xl font-bold text-gray-900">Llaveros</h1>
+            </div>
+            {/* Mobile: Show shortened description below */}
+            <p className="text-xs sm:hidden text-gray-500 ml-11">
+              Llaveros únicos de anime
+            </p>
+            {/* Desktop: Show full description inline */}
+            <p className="hidden sm:block text-sm text-gray-500 ml-15">
+              Los mejores llaveros de tus animes favoritos | Recuerda que son productos únicos
+            </p>
           </div>
+          
+          {/* Right side: Cart button */}
+          {/* Right side: Cart button */}
           <button
-            className="flex items-center gap-2 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl relative"
+            className="flex items-center gap-1 sm:gap-2 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-semibold px-3 py-2 sm:px-6 sm:py-3 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl relative"
             onClick={() => navigate('/cart')}
           >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-1.5 1.5M7 13l-1.5-1.5M17 21a2 2 0 100-4 2 2 0 000 4zM9 21a2 2 0 100-4 2 2 0 000 4z" />
             </svg>
-            Ver Carrito
+            <span className="text-sm sm:text-base">Ver Carrito</span>
             {cart.length > 0 && (
-              <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-6 h-6 flex items-center justify-center font-bold">
+              <span className="absolute -top-1 -right-1 sm:-top-2 sm:-right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center font-bold">
                 {cart.length}
               </span>
             )}
@@ -96,9 +110,30 @@ function SectionXiao() {
         </div>
         
         {/* Category Filters */}
-        <div className="mt-6">
-          <h3 className="text-sm font-medium text-gray-700 mb-3">Filtrar por categoría:</h3>
-          <div className="flex flex-wrap gap-2">
+        <div className="mt-4 sm:mt-6">
+          <h3 className="text-sm font-medium text-gray-700 mb-2 sm:mb-3">Filtrar por categoría:</h3>
+          
+          {/* Mobile: Horizontal Scroll */}
+          <div className="md:hidden">
+            <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
+              {categories.map((category) => (
+                <button
+                  key={category}
+                  onClick={() => handleCategoryFilter(category)}
+                  className={`px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-300 whitespace-nowrap flex-shrink-0 ${
+                    selectedCategory === category
+                      ? 'bg-red-600 text-white shadow-lg'
+                      : 'bg-gray-100 text-gray-700 hover:bg-red-100 hover:text-red-600'
+                  }`}
+                >
+                  {category}
+                </button>
+              ))}
+            </div>
+          </div>
+          
+          {/* Desktop: Flex Wrap */}
+          <div className="hidden md:flex flex-wrap gap-2">
             {categories.map((category) => (
               <button
                 key={category}

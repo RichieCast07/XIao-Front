@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import { useNavigate } from 'react-router-dom';
 import { useCart } from '../services/cartContext.jsx';
 import { useNotification } from '../services/notificationContext.jsx';
@@ -45,7 +46,13 @@ function Cart() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-red-50">
+    <>
+      <Helmet>
+        <title> Mi Carrito - Llaveros Anime | Xiao Store</title>
+        <meta name="description" content="Carrito de compras - Revisa tus llaveros de anime seleccionados y realiza tu pedido por WhatsApp" />
+        <link rel="icon" type="image/jpeg" href="/Images/logo.jpg" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-red-50">
       {/* Header */}
       <div className="sticky top-0 z-10 bg-white/90 backdrop-blur-sm border-b border-gray-200 p-4 sm:p-6">
         <div className="flex items-center gap-4">
@@ -144,6 +151,7 @@ function Cart() {
         )}
       </div>
     </div>
+    </>
   );
 }
 

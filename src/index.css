@@ -111,3 +111,13 @@
     animation: fly-to-notification-desktop 0.6s ease-in-out 0.4s forwards;
   }
 }
+
+/* Hide scrollbar for category filters */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}

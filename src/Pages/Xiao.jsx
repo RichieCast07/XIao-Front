@@ -6,8 +6,9 @@ function Xiao() {
   return (
     <>
     <Helmet>
-      <title>Xiao</title>
-      <meta name="description" content="Xiao page description" />
+      <title> Llaveros Anime - Xiao Store</title>
+      <meta name="description" content="Tienda de llaveros de anime - Demon Slayer, Spy x Family, Dragon Ball, Naruto y más" />
+      <link rel="icon" type="image/jpeg" href="/Images/logo.jpg" />
     </Helmet>
     <div className="w-screen">
         <Sidebar />
