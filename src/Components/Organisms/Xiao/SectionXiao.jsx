@@ -5,22 +5,59 @@ import Card from '../../Molecules/Xiao/Card';
 
 function SectionXiao() {
   const [data, setData] = useState([
-    {index:1, src: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300&h=300&fit=crop&crop=center", name: "Auriculares Premium", price: "$99.99"}, 
-    {index:2, src: "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=300&h=300&fit=crop&crop=center", name: "Reloj Inteligente", price: "$299.99"}, 
-    {index:3, src: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=300&h=300&fit=crop&crop=center", name: "Cámara Digital", price: "$799.99"}, 
-    {index:4, src: "https://images.unsplash.com/photo-1583394838336-acd977736f90?w=300&h=300&fit=crop&crop=center", name: "Smartphone Pro", price: "$1,199.99"}, 
-    {index:5, src: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300&h=300&fit=crop&crop=center", name: "Zapatillas Sport", price: "$159.99"}, 
-    {index:6, src: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=300&h=300&fit=crop&crop=center", name: "Reloj Clásico", price: "$449.99"}, 
-    {index:7, src: "https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=300&h=300&fit=crop&crop=center", name: "Perfume Elegante", price: "$89.99"}, 
-    {index:8, src: "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=300&h=300&fit=crop&crop=center", name: "Gafas de Sol", price: "$199.99"},
-    {index:9, src: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?w=300&h=300&fit=crop&crop=center", name: "Laptop Gaming", price: "$1,499.99"}, 
-    {index:10, src: "https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?w=300&h=300&fit=crop&crop=center", name: "Mochila Urbana", price: "$79.99"}, 
-    {index:11, src: "https://images.unsplash.com/photo-1484704849700-f032a568e944?w=300&h=300&fit=crop&crop=center", name: "Taza Premium", price: "$24.99"}, 
-    {index:12, src: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=300&h=300&fit=crop&crop=center", name: "Tienda Virtual", price: "$39.99"}
+    {index:1, src: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300&h=300&fit=crop&crop=center", name: "Llavero Tanjiro", price: "$15.99", category: "Demon Slayer"}, 
+    {index:2, src: "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=300&h=300&fit=crop&crop=center", name: "Llavero Anya", price: "$12.99", category: "Spy x Family"}, 
+    {index:3, src: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=300&h=300&fit=crop&crop=center", name: "Llavero Totoro", price: "$18.99", category: "Mi Vecino Totoro"}, 
+    {index:4, src: "https://images.unsplash.com/photo-1583394838336-acd977736f90?w=300&h=300&fit=crop&crop=center", name: "Llavero Goku", price: "$16.99", category: "Dragon Ball"}, 
+    {index:5, src: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300&h=300&fit=crop&crop=center", name: "Llavero Luffy", price: "$14.99", category: "One Piece"}, 
+    {index:6, src: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=300&h=300&fit=crop&crop=center", name: "Llavero Naruto", price: "$13.99", category: "Naruto"}, 
+    {index:7, src: "https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=300&h=300&fit=crop&crop=center", name: "Llavero Eren", price: "$17.99", category: "Attack on Titan"}, 
+    {index:8, src: "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=300&h=300&fit=crop&crop=center", name: "Llavero Mafuyu", price: "$19.99", category: "Given"},
+    {index:9, src: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?w=300&h=300&fit=crop&crop=center", name: "Llavero Light", price: "$21.99", category: "Death Note"}, 
+    {index:10, src: "https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?w=300&h=300&fit=crop&crop=center", name: "Llavero Nezuko", price: "$15.99", category: "Demon Slayer"}, 
+    {index:11, src: "https://images.unsplash.com/photo-1484704849700-f032a568e944?w=300&h=300&fit=crop&crop=center", name: "Llavero Loid", price: "$14.99", category: "Spy x Family"}, 
+    {index:12, src: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=300&h=300&fit=crop&crop=center", name: "Llavero Vegeta", price: "$16.99", category: "Dragon Ball"},
+    {index:13, src: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&h=300&fit=crop&crop=center", name: "Llavero Tomioka", price: "$18.99", category: "Demon Slayer"},
+    {index:14, src: "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=300&h=300&fit=crop&crop=center", name: "Llavero Edward Elric", price: "$17.99", category: "Otros"},
+    {index:15, src: "https://images.unsplash.com/photo-1607734834519-d8576ae60ea4?w=300&h=300&fit=crop&crop=center", name: "Llavero Inuyasha", price: "$16.99", category: "Otros"},
+    {index:16, src: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&h=300&fit=crop&crop=center", name: "Llavero Sailor Moon", price: "$19.99", category: "Otros"}
   ]);
+  
+  const [filteredData, setFilteredData] = useState(data);
+  const [selectedCategory, setSelectedCategory] = useState('Todos');
+  
+  const categories = [
+    'Todos',
+    'Demon Slayer',
+    'Spy x Family', 
+    'Mi Vecino Totoro',
+    'Dragon Ball',
+    'One Piece',
+    'Naruto',
+    'Attack on Titan',
+    'Given',
+    'Death Note',
+    'Otros'
+  ];
   
   const navigate = useNavigate();
   const { cart } = useCart();
+
+  // Filter function
+  const handleCategoryFilter = (category) => {
+    setSelectedCategory(category);
+    if (category === 'Todos') {
+      setFilteredData(data);
+    } else {
+      const filtered = data.filter(item => item.category === category);
+      setFilteredData(filtered);
+    }
+  };
+
+  useEffect(() => {
+    // Initialize filtered data
+    setFilteredData(data);
+  }, [data]);
 
   useEffect(() => {
     // Request notification permission
@@ -57,15 +94,60 @@ function SectionXiao() {
             )}
           </button>
         </div>
+        
+        {/* Category Filters */}
+        <div className="mt-6">
+          <h3 className="text-sm font-medium text-gray-700 mb-3">Filtrar por categoría:</h3>
+          <div className="flex flex-wrap gap-2">
+            {categories.map((category) => (
+              <button
+                key={category}
+                onClick={() => handleCategoryFilter(category)}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                  selectedCategory === category
+                    ? 'bg-red-600 text-white shadow-lg transform scale-105'
+                    : 'bg-gray-100 text-gray-700 hover:bg-red-100 hover:text-red-600'
+                }`}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
+        </div>
       </div>
 
       {/* Products Grid */}
       <div className="p-4 sm:p-6">
+        <div className="mb-4">
+          <p className="text-gray-600">
+            {selectedCategory === 'Todos' 
+              ? `Mostrando todos los productos (${filteredData.length})` 
+              : `Mostrando productos de ${selectedCategory} (${filteredData.length})`
+            }
+          </p>
+        </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {data && data.map(item => (
+          {filteredData && filteredData.map(item => (
             <Card key={item.index} item={item} />
           ))}
         </div>
+        {filteredData.length === 0 && (
+          <div className="text-center py-16">
+            <div className="w-24 h-24 mx-auto mb-6 bg-gray-100 rounded-full flex items-center justify-center">
+              <svg className="w-12 h-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4" />
+              </svg>
+            </div>
+            <h3 className="text-xl font-semibold text-gray-700 mb-2">No hay productos en esta categoría</h3>
+            <p className="text-gray-500 mb-6">Intenta seleccionar otra categoría</p>
+            <button
+              onClick={() => handleCategoryFilter('Todos')}
+              className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300 transform hover:scale-105"
+            >
+              Ver todos los productos
+            </button>
+          </div>
+        )}
       </div>
     </div>
   )

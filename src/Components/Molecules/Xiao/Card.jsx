@@ -98,8 +98,15 @@ function Card({ item }) {
         <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 line-clamp-2 group-hover:text-red-600 transition-colors duration-300">
           {item.name}
         </h3>
+        {item.category && (
+          <div className="mb-2">
+            <span className="inline-block bg-red-100 text-red-800 text-xs font-semibold px-2 py-1 rounded-full">
+              {item.category}
+            </span>
+          </div>
+        )}
         <p className="text-sm text-gray-500 mb-4 line-clamp-2">
-          Producto de alta calidad disponible para ti
+          Llavero de alta calidad con diseño único
         </p>
         
         {/* Action Button */}
