@@ -7,7 +7,7 @@ function Cart() {
   const { cart, removeFromCart, clearCart } = useCart();
   const { addNotification } = useNotification();
   const navigate = useNavigate();
-  const phone = '529661236243';
+  const phone = '529613225891';
   
   // Calculate total
   const total = cart.reduce((sum, item) => {

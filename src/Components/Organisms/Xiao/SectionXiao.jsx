@@ -5,8 +5,8 @@ import Card from '../../Molecules/Xiao/Card';
 
 function SectionXiao() {
   const [data, setData] = useState([
-    {index:1, src: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300&h=300&fit=crop&crop=center", name: "Llavero Tanjiro", price: "$15.99", category: "Demon Slayer"}, 
-    {index:2, src: "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=300&h=300&fit=crop&crop=center", name: "Llavero Anya", price: "$12.99", category: "Spy x Family"}, 
+    {index:1, src: "Ai Hoshino 1.jpeg", name: "Llavero Tanjiro", price: "$15.99", category: "Demon Slayer"}, 
+    {index:2, src: "Calcifer 1.jpeg", name: "Llavero Anya", price: "$12.99", category: "Spy x Family"}, 
     {index:3, src: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=300&h=300&fit=crop&crop=center", name: "Llavero Totoro", price: "$18.99", category: "Mi Vecino Totoro"}, 
     {index:4, src: "https://images.unsplash.com/photo-1583394838336-acd977736f90?w=300&h=300&fit=crop&crop=center", name: "Llavero Goku", price: "$16.99", category: "Dragon Ball"}, 
     {index:5, src: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300&h=300&fit=crop&crop=center", name: "Llavero Luffy", price: "$14.99", category: "One Piece"}, 
