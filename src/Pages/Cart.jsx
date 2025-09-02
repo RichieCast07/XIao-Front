@@ -7,7 +7,7 @@ function Cart() {
   const { cart, removeFromCart, clearCart } = useCart();
   const { addNotification } = useNotification();
   const navigate = useNavigate();
-  const phone = '529613225891';
+  const phone = '529661236243';
   
   // Calculate total
   const total = cart.reduce((sum, item) => {
@@ -31,7 +31,7 @@ function Cart() {
     message += `* - Resumen del pedido:*\n`;
     message += `• Total de productos: ${cart.length}\n`;
     message += `• Total a pagar: *$${total.toFixed(2)}*\n\n`;
-    message += `* - Enviado desde la tienda online*\n`;
+    message += `* - Enviado desde la Tienda Xiao*\n`;
     message += `¡Gracias por su preferencia! 🙏`;
     
     return message;
