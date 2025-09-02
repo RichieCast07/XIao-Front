@@ -34,7 +34,7 @@ function SectionXiao() {
     {index:27, src: "Sanemi Shinazugawa 2.jpeg", name: "Sanemi Shinazugawa 2", price: "$50.00", category: "Otros"},
     {index:28, src: "Shoto Todoroki 1.jpeg", name: "Shoto Todoroki 1", price: "$50.00", category: "Otros"},
     {index:29, src: "Sung Jinwoo 1.jpeg", name: "Sung Jinwoo 1", price: "$50.00", category: "Otros"},
-    {index:30, src: "Titan De Ataque 1.jpeg", name: "Titan De Ataque 1", price: "$50.00", category: "Attack on Titan"}
+    {index:30, src: "Titan De Ataque 1.jpeg", name: "Titan De Ataque 1", price: "$50.00", category: "Otros"}
 
   ]);
   
@@ -48,7 +48,6 @@ function SectionXiao() {
     'Studio Ghibli',
     'One Piece',
     'Naruto',
-    'Attack on Titan',
     'Hunter x Hunter',
     'Otros'
   ];
