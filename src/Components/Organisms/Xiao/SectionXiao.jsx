@@ -5,22 +5,37 @@ import Card from '../../Molecules/Xiao/Card';
 
 function SectionXiao() {
   const [data, setData] = useState([
-    {index:1, src: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300&h=300&fit=crop&crop=center", name: "Llavero Tanjiro", price: "$15.99", category: "Demon Slayer"}, 
-    {index:2, src: "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=300&h=300&fit=crop&crop=center", name: "Llavero Anya", price: "$12.99", category: "Spy x Family"}, 
-    {index:3, src: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=300&h=300&fit=crop&crop=center", name: "Llavero Totoro", price: "$18.99", category: "Mi Vecino Totoro"}, 
-    {index:4, src: "https://images.unsplash.com/photo-1583394838336-acd977736f90?w=300&h=300&fit=crop&crop=center", name: "Llavero Goku", price: "$16.99", category: "Dragon Ball"}, 
-    {index:5, src: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300&h=300&fit=crop&crop=center", name: "Llavero Luffy", price: "$14.99", category: "One Piece"}, 
-    {index:6, src: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=300&h=300&fit=crop&crop=center", name: "Llavero Naruto", price: "$13.99", category: "Naruto"}, 
-    {index:7, src: "https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=300&h=300&fit=crop&crop=center", name: "Llavero Eren", price: "$17.99", category: "Attack on Titan"}, 
-    {index:8, src: "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=300&h=300&fit=crop&crop=center", name: "Llavero Mafuyu", price: "$19.99", category: "Given"},
-    {index:9, src: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?w=300&h=300&fit=crop&crop=center", name: "Llavero Light", price: "$21.99", category: "Death Note"}, 
-    {index:10, src: "https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?w=300&h=300&fit=crop&crop=center", name: "Llavero Nezuko", price: "$15.99", category: "Demon Slayer"}, 
-    {index:11, src: "https://images.unsplash.com/photo-1484704849700-f032a568e944?w=300&h=300&fit=crop&crop=center", name: "Llavero Loid", price: "$14.99", category: "Spy x Family"}, 
-    {index:12, src: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=300&h=300&fit=crop&crop=center", name: "Llavero Vegeta", price: "$16.99", category: "Dragon Ball"},
-    {index:13, src: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&h=300&fit=crop&crop=center", name: "Llavero Tomioka", price: "$18.99", category: "Demon Slayer"},
-    {index:14, src: "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=300&h=300&fit=crop&crop=center", name: "Llavero Edward Elric", price: "$17.99", category: "Otros"},
-    {index:15, src: "https://images.unsplash.com/photo-1607734834519-d8576ae60ea4?w=300&h=300&fit=crop&crop=center", name: "Llavero Inuyasha", price: "$16.99", category: "Otros"},
-    {index:16, src: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&h=300&fit=crop&crop=center", name: "Llavero Sailor Moon", price: "$19.99", category: "Otros"}
+    {index:1, src: "Ai Hoshino 1.jpeg", name: "Ai Hoshino 1", price: "$50.00", category: "Otros"}, 
+    {index:2, src: "Calcifer 1.jpeg", name: "Calcifer 1", price: "$50.00", category: "Studio Ghibli"}, 
+    {index:3, src: "Totoro1.jpeg", name: "Totoro 1", price: "$50.00", category: "Studio Ghibli"}, 
+    {index:4, src: "Clan Uchiha Simbolo1.jpeg", name: "Clan Uchiha Simbolo 1", price: "$50.00", category: "Naruto"}, 
+    {index:5, src: "Denji 1.jpeg", name: "Denji 1", price: "$50.00", category: "Chainsaw Man"}, 
+    {index:6, src: "Denji 2.jpeg", name: "Denji 2", price: "$50.00", category: "Chainsaw Man"}, 
+    {index:7, src: "Frieren 1.jpeg", name: "Frieren 1", price: "$50.00", category: "Otros"}, 
+    {index:8, src: "Giyu Tomioka1.jpeg", name: "Giyu Tomioka 1", price: "$50.00", category: "Demon Slayer"},
+    {index:9, src: "Ichigo Kurosaki 1.jpeg", name: "Ichigo Kurosaki 1", price: "$50.00", category: "Otros"}, 
+    {index:10, src: "Kakashi Hatake1.jpeg", name: "Kakashi Hatake 1", price: "$50.00", category: "Naruto"}, 
+    {index:11, src: "Katsuki Bakugo 1.jpeg", name: "Katsuki Bakugo 1", price: "$50.00", category: "Otros"}, 
+    {index:12, src: "Killua Zoldyck1.jpeg", name: "Killua Zoldyck", price: "$50.00", category: "Hunter x Hunter"},
+    {index:13, src: "Kirito 1.jpeg", name: "Kirito 1", price: "$50.00", category: "Otros"},
+    {index:14, src: "Kyojuro Rengoku1.jpeg", name: "Kyojuro Rengoku 1", price: "$50.00", category: "Demon Slayer"},
+    {index:15, src: "L 1).jpeg", name: "L", price: "$50.00", category: "Otros"},
+    {index:16, src: "Makina 1.jpeg", name: "Makina", price: "$50.00", category: "Chainsaw Man"},
+    {index:17, src: "Manjiro Sano 1.jpeg", name: "Manjiro Sano 1", price: "$50.00", category: "Otros"},
+    {index:18, src: "Manjiro Sano 2.jpeg", name: "Manjiro Sano 2", price: "$50.00", category: "Otros"},
+    {index:19, src: "Mob (Shigeo Kageyama) 1.jpeg", name: "Mob (Shigeo Kageyama) 1", price: "$50.00", category: "Otros"},
+    {index:20, src: "Monkey D. Luffy 1.jpeg", name: "Monkey D. Luffy 1", price: "$50.00", category: "One Piece"},
+    {index:21, src: "Nezuko Kamado 1.jpeg", name: "Nezuko Kamado 1", price: "$50.00", category: "Demon Slayer"},
+    {index:22, src: "Nezuko Kamado 2.jpeg", name: "Nezuko Kamado 2", price: "$50.00", category: "Demon Slayer"},
+    {index:23, src: "Power 1.jpeg", name: "Power 1", price: "$50.00", category: "Otros"},
+    {index:24, src: "Roronoa Zoro 1.jpeg", name: "Roronoa Zoro 1", price: "$50.00", category: "One Piece"},
+    {index:25, src: "Roronoa Zoro 2.jpeg", name: "Roronoa Zoro 2", price: "$50.00", category: "One Piece"},
+    {index:26, src: "Sanemi Shinazugawa 1.jpeg", name: "Sanemi Shinazugawa 1", price: "$50.00", category: "Otros"},
+    {index:27, src: "Sanemi Shinazugawa 2.jpeg", name: "Sanemi Shinazugawa 2", price: "$50.00", category: "Otros"},
+    {index:28, src: "Shoto Todoroki 1.jpeg", name: "Shoto Todoroki 1", price: "$50.00", category: "Otros"},
+    {index:29, src: "Sung Jinwoo 1.jpeg", name: "Sung Jinwoo 1", price: "$50.00", category: "Otros"},
+    {index:30, src: "Titan De Ataque 1.jpeg", name: "Titan De Ataque 1", price: "$50.00", category: "Attack on Titan"}
+
   ]);
   
   const [filteredData, setFilteredData] = useState(data);
@@ -29,14 +44,12 @@ function SectionXiao() {
   const categories = [
     'Todos',
     'Demon Slayer',
-    'Spy x Family', 
-    'Mi Vecino Totoro',
-    'Dragon Ball',
+    'Chainsaw Man',
+    'Studio Ghibli',
     'One Piece',
     'Naruto',
     'Attack on Titan',
-    'Given',
-    'Death Note',
+    'Hunter x Hunter',
     'Otros'
   ];
   

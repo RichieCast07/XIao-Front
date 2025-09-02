@@ -31,7 +31,7 @@ function Cart() {
     message += `* - Resumen del pedido:*\n`;
     message += `• Total de productos: ${cart.length}\n`;
     message += `• Total a pagar: *$${total.toFixed(2)}*\n\n`;
-    message += `* - Enviado desde la tienda online*\n`;
+    message += `* - Enviado desde la Tienda Xiao*\n`;
     message += `¡Gracias por su preferencia! 🙏`;
     
     return message;
